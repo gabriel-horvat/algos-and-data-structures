@@ -1,0 +1,49 @@
+<script>
+function maxCellCount() {
+  console.log(document);
+  let tables = document.getElementsByTagName("table");
+  let maxCellCount = 0;
+  let cellCount;
+  
+  for (let table of tables) {
+    cellCount = 0;
+    rows = table.getElementsByTagName("tr");
+    for (let row of rows) {
+      cells = row.getElementsByTagName("td");
+      cellCount += cells.length;
+      maxCellCount = cellCount > maxCellCount ? cellCount : maxCellCount;
+    }
+  }
+  console.log(maxCellCount);
+  return maxCellCount;
+}
+maxCellCount();
+
+</script>
+
+<table>
+  <tr>
+    <td>First</td>
+    <td>row</td>
+    <td>First</td>
+    <td>First</td>
+    <td>First</td>
+    <td>First</td>
+    <td>First</td>
+   </tr>
+   <tr>
+     <td>and</td>
+     <td>second</td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>First</td>
+    <td>row</td>
+  </tr>
+  <tr>
+    <td>and</td>
+    <td>second</td>
+ </tr>
+</table>
+
